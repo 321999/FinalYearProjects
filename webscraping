@@ -1,0 +1,11 @@
+#importing the dependencies or driver for webscraping  
+from turtle import heading 
+from bs4 import BeautifulSoup 
+import requests 
+#the website on which we gona perform webscrapig is:https://stats.espncricinfo.com/ci/engine/records/team/match_results.html?id=14450;type=tournament
+r=requests.get("https://stats.espncricinfo.com/ci/engine/records/team/match_results.html?id=14450;type=tournament")
+
+
+#using beutifulsoup library for webscraping :::::https://pypi.org/project/beautifulsoup4/
+
+soup=BeautifulSoup(r.content,"html.parser")
